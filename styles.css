@@ -1,0 +1,160 @@
+@font-face {
+    font-family: myfont;
+    src: url('fonts/COMIC.TTF');
+}
+#nav-style {
+    text-decoration: none;
+    color: black;
+    font-family: myfont;
+}
+#nav-style:hover {
+    color: darkorange;
+}
+#signup label {
+    color: darkorange;
+}
+.navbar-brand {
+    color: black;
+    text-decoration: none;
+    font-family: myfont;
+}
+.navbar-brand:hover {
+    color: darkorange;
+}
+.dropdown-item {
+    font-family: myfont;
+    color: black;
+}
+.dropdown-item:hover {
+    color: darkorange;
+}
+.some-style {
+    font-family: myfont;
+    color: black;
+    text-decoration: none;
+}
+.login-style {
+    font-family: myfont;
+    color: black;
+    text-decoration: none;
+}
+.some-style:hover {
+    color: darkorange;
+    text-decoration: underline;
+}
+a {
+    color: black;
+    font-family: myfont;
+    text-decoration: none;
+}
+a:hover {
+    color: darkorange;
+    text-decoration: underline;
+}
+.btn {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background-color: darkorange;
+    font-family: myfont;
+}
+.btn:hover {
+    color: darkorange;
+    background-color: black;
+}
+#more {
+    color: black;
+    background-color: darkorange;
+}
+#more:hover {
+    color: darkorange;
+    background-color: black;
+}
+strong {
+    color: darkorange;
+    font-family: myfont;
+}
+.card-body {
+    color: black;
+}
+.card-body:hover {
+    color: darkorange;
+    text-decoration: underline;
+}
+#logo-id {
+    color: darkorange;
+}
+#logo-id:hover {
+    color: black;
+}
+p {
+    color: black;
+    font-family: myfont;
+}
+.fa {
+    padding: 10px;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: -10px;
+    border-radius: 50%;
+  }
+  
+  .fa-facebook-f, .fa-facebook-messenger, .fa-instagram, .fa-whatsapp, .fa-pinterest-p {
+    color: darkorange;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  footer .fa-facebook-f, footer .fa-facebook-messenger, footer .fa-instagram, footer .fa-whatsapp, footer .fa-pinterest-p {
+    text-align: left;
+    color: #fff;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+  .footer-link {
+      color: #fff;
+  }
+  .footer-link:hover {
+      color: #fff;
+  }
+
+  @media (min-width: 576px) {
+      iframe {
+          width: 100%;
+          height: auto;
+      }
+  }
+  @media (min-width: 768px) {
+      iframe {
+          width: 100%;
+          height: auto;
+      }
+  }
+  @media (min-width: 992px) {
+      iframe {
+          width: 100%;
+          height: auto;
+      }
+  }
+  @media (min-width: 1200) {
+      iframe {
+          width: 100%;
+          height: auto;
+      }
+  }
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-caption {
+      font-family: myfont;
+  }

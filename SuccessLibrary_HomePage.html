@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="bootstrap_4/js/jquery.js"></script>
+        <script src="bootstrap_4/js/popper.min.js"></script>
+        <script src="bootstrap_4/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.min.css">
+        <link rel="stylesheet" href="bootstrap_4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="pictures/sada logo.jpg" type="image/x-icon">
+        <title>SuccessLibrary.com</title>
+
+        <script text="javascript">
+            // name validation
+            var nameValid = false;
+            function name_validation() {
+                var name = document.getElementById("name").value;
+                var pat = /[A-z]{3,16}/;
+                if(pat.test(name)) {
+                    nameValid = true;
+                }else {
+                    alert("Incorrect Name!");
+                }
+            }
+            // email validation
+            var emailValid = false;
+            function email_validation() {
+                var email = document.getElementById("email").value;
+                var pat = /[a-zA-Z0-9.!#$%&]{3,32}@[a-zA-Z0-9]{4,16}.[a-zA-Z]{2,7}/;
+                if(pat.test(email)) {
+                    emailValid = true;
+                }else {
+                    alert("Incorrect Email Address!");
+                }
+            }
+            // username validation
+            var usernameValid = false;
+            function username_validation() {
+                var username = document.getElementById("username").value;
+                var pat = /[A-z0-9]{6,16}/;
+                if(pat.test(username)) {
+                    usernameValid = true;
+                }else {
+                    alert("Incorrect Username!");
+                }
+            }
+            // phone number validation
+            var phoneValid = false;
+            function phone_validation() {
+                var phone = document.getElementById("phone").value;
+                var pat = /07[0246789][0-9]{7}/;
+                if(pat.test(phone)) {
+                    phoneValid = true;
+                }else {
+                    alert("Incorrect Phone Number!");
+                }
+            }
+            // password validation
+            var passwordValid = false;
+            function password_validation() {
+                var password = document.getElementById("password").value;
+                var pat = /[A-Za-z\d]{8,}$/;
+                if(pat.test(password)) {
+                    passwordValid = true;
+                }else {
+                    alert("Incorrect Password!");
+                }
+            }
+            
+        
+            function form_submit () {
+                if(nameValid & passwordValid & phoneValid & usernameValid & emailValid){
+                    alert("You Have Successfully Created An Account!");
+                    return true;
+                }else {
+                    alert("Please Fill The Form Correctly!!!");
+                    event.preventDefault();
+                    return false;
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top" style="background-color: white; box-shadow: 0 4px 20px -2px rgba(0,0,0,.2);">
+        <a class="navbar-brand" href="SuccessLibrary_HomePage.html" style="margin-right: 30px;">
+            <img src="pictures/sada logo.jpg" width="55px" height="40px">SUCCESS<strong>LIBLARY</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon">   
+               
+            </span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="SuccessLibrary_HomePage.html" id="nav-style">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" id="nav-style">CARAGORY</a>
+                <div class="dropdown-menu">
+                    <a href="SuccessLibrary_English.html" class="dropdown-item">English Books</a>
+                    <a href="SuccessLibrary_CS.html" class="dropdown-item">Computer Science Books</a> 
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="nav-style" data-toggle="modal" data-target="#about">ABOUT</a>
+            </li>
+            
+          </ul>
+        </div>  
+        <div class="sign-up">
+            <button class="btn" type="submit" data-toggle="modal" data-target="#signup" style="color: white; background-color: darkorange; border-radius: 7px; margin-right: 20px;">Sign Up</button>
+        </div>
+    </nav>
+
+    <div id="about" class="modal">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="some-style" style="color: black;">ABOUT</h4>
+                    <button class="close" type="button" data-dismiss="modal" style="color: black;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3" style="text-align: center; margin-top: 35px;"> 
+                            <img src="pictures/firsty.jpg" style="margin-left: 0px; margin-top: 30px;" width="250px" height="200px">
+                        </div>
+                        <div class="col-md-1" style="border-right: 1px solid black;">
+                        </div>
+                        <div class="col-sm-11 col-md-7" style="margin: 20px; margin-left: 20px; text-align: justify;">
+                            <p style="color: black;"><strong>Success.com</strong> is a succession of websites in English language.
+                            It contains several segments about several issues. It is available in whole world. The major idea 
+                            for creating these series is to cover all the issues in several segments called 
+                            Success.com, and contribute people from different countries to download anything they want.
+                            For instance, for downloading books, now SuccessLibrary.com is available. These series
+                            originated from Afghanistan in Asia.</p>
+                            <p style="color: black;">
+                                <b>Developers:</b> <br> Sadaf Nawaby <br> Madina Bashary <br> Zainab Sadat<br> Tahmina Rasouli <br> Nazifa Karimi <br>
+                                <div style="float: right;">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-messenger"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="signup">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="login-style">Create A New Account</h4>
+                    <button class="close" type="button" data-dismiss="modal" style="color: black;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6" style="margin: auto;">
+                            <form action="#" method="POST" onsubmit="form_submit(event);" style="padding: 12px;" class="needs-validation">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group" style="margin-top: -10px; margin-bottom: 20px;">
+                                            <label for="name">Name</label>
+                                            <input type="text" onchange = "name_validation();" class="form-control" id="name" placeholder="Name" name="name" required>
+                                        </div>
+                                        <div class="form-group" style="margin-top: -10px; margin-bottom: 20px;">
+                                            <label for="email">Email</label>    
+                                            <input type="email" onchange = "email_validation();" class="form-control" id="email" placeholder="Email" name="email" required>
+                                        </div>
+                                        <div class="form-group" style="margin-top: -10px; margin-bottom: 20px;">
+                                            <label for="username">Username</label>
+                                            <input type="text" onchange = "username_validation();" class="form-control" id="username" placeholder="Username" name="username" required>
+                                        </div>
+                                        <div class="form-group" style="margin-top: -10px; margin-bottom: 20px;">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="text" onchange = "phone_validation();" class="form-control" id="phone" placeholder="Phone Number" name="phone" required>
+                                        </div>
+                                        <div class="form-group" style="margin-top: -10px; margin-bottom: 20px;">
+                                            <label for="password">Password</label>
+                                            <input type="password" onchange = "password_validation();" class="form-control" id="password" placeholder="Password" name="password" minlength = "8" required>
+                                            <i id="togglePassword"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                   
+                                <!-- button row -->
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12" style="padding: 5px 10px; margin-top: -1px; text-align: center;">
+                                        <button class="btn" type="submit" id="submit" style="color: white; width: 97%;background-color: darkorange; border-radius: 7px;">Sign Up</button>
+                                    </div>
+                                </div>
+                           
+                            </form> <br>
+                   
+                            <!-- copyright msg -->
+                            <p style="color: gray; font-size: 13px; text-align: center;">&copy; Copyright 2022 by Success Library team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="slide-show" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slide-show" data-slide-to="0" class="active"></li>
+            <li data-target="#slide-show" data-slide-to="1"></li>
+            <li data-target="#slide-show" data-slide-to="2"></li>
+            <li data-target="#slide-show" data-slide-to="3"></li>
+            <li data-target="#slide-show" data-slide-to="4"></li>
+            <li data-target="#slide-show" data-slide-to="5"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="pictures/first.jpg" width="100%" height="500px">
+                <div class="carousel-caption">
+                    <h1>The National Library Of Prague</h1>
+                    <h3>Prague, Czech Republic</h3>
+                </div> 
+            </div>
+            <div class="carousel-item">
+                <img src="pictures/second.jpg" width="100%" height="500px">
+                <div class="carousel-caption">
+                    <h1>Florian Monastery Library</h1>
+                    <h3>Austria</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="pictures/third.jpg" width="100%" height="500px">
+                <div class="carousel-caption">
+                    <h1>The Admont Library</h1>
+                    <h3>Admont, Austria</h3>
+                </div>
+            </div>
+        <div class="carousel-item">
+            <img src="pictures/fourth.jpg" width="100%" height="500px">
+            <div class="carousel-caption">
+                <h1>George Peabody Library</h1>
+                <h3>Baltimore, Maryland, USA</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="pictures/fifth.jpg" width="100%" height="500px">
+            <div class="carousel-caption">
+                <h1>Austrian National Library</h1>
+                <h3>Vienna, Austria</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="pictures/sixth.jpg" width="100%" height="500px">
+            <div class="carousel-caption">
+                <h1>Bibliothèque Nationale De France Library</h1>
+                <h3>Paris, France</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="containergb(250, 59, 11)-5 bg-white rounded">
+        <br>
+
+        <div class="row shadow p-3 mb-5 bg-white rounded" style="width: 90%; margin: 40px;">
+            <div class="col-sm-12 col-md-3" style="text-align: center; margin-top: 35px;"> 
+                <img src="books\CS_Book_Pics\flutter-complete.jpg" style="margin-left: 20px;" width="200px" height="300px">
+            </div>
+            <div class="col-md-1" style="border-right: 1px solid black;">
+            </div>
+            <div class="col-sm-11 col-md-7" style="margin: 20px; margin-left: 20px; text-align: justify;">
+                <h3 style="font-family: myfont;">Flutter Complete Reference</h3> <br>
+                <p>It written by <strong>Alberto Miola.</strong> Flutter is Google's UI toolkit for 
+                    creating beautiful and native applications for mobile, desktop and web from a 
+                    single Dart codebase. In this book we cover in detail the Dart programming 
+                    language (version 2.10, with null safety support) and the Flutter framework 
+                    (version 1.20).While reading the chapters, you'll find a lot of good practices, 
+                    tips and performance advices to build high quality products.</p>
+                <p>Categories: Programming <br>
+                    Language: English <br>
+                    Year: 2020 <br>
+                    Edition: 1 <br>
+                    Pages: 765 <br>
+                    ISBN 13: 9798691939952 <br>
+                    File: RAR, 4.11 MB</p>
+                <a href="SuccessLibrary_CS.html" class="btn stretched-link btn-block">Download more Computer Science book from here>></a>
+            </div>
+        </div>
+
+        <div class="row shadow p-3 mb-5 bg-white rounded" style="width: 90%; margin: 40px;">
+            <div class="col-sm-12 col-md-3" style="text-align: center; margin-top: 35px;"> 
+                <img src="English_books\pictures\grammer-in-use.jpg" style="margin-left: 20px;" width="200px" height="300px">
+            </div>
+            <div class="col-md-1" style="border-right: 1px solid black;">
+            </div>
+            <div class="col-sm-11 col-md-7" style="margin: 20px; margin-left: 20px; text-align: justify;">
+                <h3 style="font-family: myfont;">English Grammer In Use</h3>
+                <p>It written by <strong>Raymond Murphy.</strong> English Grammar in UseFifth EditionThe 
+                    world's best-selling grammar series for learners of English. Raymond Murphy's English 
+                    Grammar in Use is the world’s best-selling grammar reference and practice book for 
+                    learners of English at intermediate (B1-B2) level. It’s perfect for self-study, 
+                    but also ideal for supplementary grammar activities in the classroom. The fifth edition 
+                    is available as a printed book and ebook with audio, for on-the-go learning. It comes 
+                    with interactive exercises and integrated audio to help with listening and pronunciation 
+                    skills. </p>
+                <p>Categories: Linguistics/Foreign: English <br>
+                    Language: English <br>
+                    Year: 2019 <br>
+                    File: RAR, 9.46 MB</p>
+                <a href="SuccessLibrary_English.html" class="btn stretched-link btn-block">Download more English book from here>></a>
+            </div>
+        </div>
+                            
+    </div>
+
+    <footer style="background-color: darkorange; background-size: cover;" class="container-fluid">
+        <div class="row" style="padding: 30px 30px 10px 30px; color: white;">
+            <div class="col-sm-12 col-md-6">
+                <h3 style="font-family: myfont;">ABOUT</h3>
+                <p style="color: white;">Success.com is a succession of websites in English language.
+                It contains several segments about several issues. It is available in whole world. The major idea 
+                for creating these series is to cover all the issues in several segments called 
+                Success.com, and contribute people from different countries to download anything they want.
+                For instance, for downloading books, now SuccessLibrary.com is available. These series
+                originated from Afghanistan in Asia.</p>
+            </div>
+            <div class="col-sm-12 col-md-3" style="text-align: center;">
+                <h3 style="font-family: myfont;">DEVELOPERS</h3>
+                <div style="font-family: myfont;">Sadaf Nawaby <br> Madina Bashary <br> Zainab Sadat<br> Tahmina Rasouli <br> Nazifa Karimi <br></div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <h3 style="font-family: myfont;">CONTACT US</h3>
+                <div >
+                    <a href="#" class="footer-link"><i class="fab fa-facebook-f"></i>FACEBOOK</a><br>
+                    <a href="#" class="footer-link"><i class="fab fa-facebook-messenger"></i>MESSENGER</a><br>
+                    <a href="#" class="footer-link"><i class="fab fa-instagram"></i>INSTAGRAM</a><br>
+                    <a href="#" class="footer-link"><i class="fab fa-whatsapp"></i>WHATSAPP</a><br>
+                    <a href="#" class="footer-link"><i class="fab fa-pinterest-p"></i>PINTEREST</a><br>
+                </div>
+            </div>
+            
+        </div>
+ 
+        <hr style="border-bottom: 1px solid white;">
+        <div class="row" style="text-align: center;">
+            <div class="col-sm-12 col-md-12">
+             <p style="color: white;">&copy;Copyright: 2022 by Successs Library Team</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>
+
